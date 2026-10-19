@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Find a Bargain is an experimental browser extension for researching UK second-hand listings and comparing market prices.">
+  <title>Find a Bargain — Smarter second-hand research</title>
+  <style>
+    :root { --ink:#13293b; --muted:#52677a; --accent:#147d66; --light:#f2f7f5; --line:#dce7e4; --bg:#f8fafb; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.6; }
+    a { color:var(--accent); }
+    .wrap { width:min(100% - 2.5rem, 1000px); margin:auto; }
+    header { border-bottom:1px solid var(--line); background:#fff; }
+    header .wrap { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1.15rem 0; }
+    .brand { font-size:1.08rem; font-weight:800; letter-spacing:-.03em; display:flex; align-items:center; gap:.65rem; }
+    .mark { width:33px; height:33px; display:grid; place-items:center; color:white; background:var(--accent); border-radius:10px; font-size:1.1rem; }
+    .phase { font-size:.82rem; border:1px solid var(--line); border-radius:999px; padding:.3rem .75rem; color:var(--muted); font-weight:650; background:var(--light); }
+    main { padding:4rem 0 4.5rem; }
+    .hero { max-width:760px; }
+    .eyebrow { text-transform:uppercase; font-size:.8rem; letter-spacing:.14em; color:var(--accent); font-weight:800; margin:0 0 1rem; }
+    h1 { font-size:clamp(2.3rem,5.2vw,4.15rem); letter-spacing:-.06em; line-height:1.09; margin:0 0 1.35rem; font-weight:820; }
+    .lead { color:var(--muted); font-size:clamp(1.03rem,2vw,1.22rem); margin:0; max-width:690px; }
+    .callout { background:#e8f5f0; border:1px solid #b9dfd1; border-radius:14px; padding:1.1rem 1.25rem; margin-top:2rem; }
+    .callout strong { color:#136650; }
+    section { margin-top:4rem; }
+    h2 { font-size:1.65rem; line-height:1.2; margin:0 0 1.2rem; letter-spacing:-.035em; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
+    .tile { background:#fff; border:1px solid var(--line); border-radius:15px; padding:1.45rem; }
+    .tile .number { background:var(--light); color:var(--accent); width:33px; height:33px; border-radius:9px; display:grid; place-items:center; font-weight:750; margin-bottom:.9rem; }
+    h3 { font-size:1.06rem; margin:0 0 .45rem; }
+    .tile p, .prose p { color:var(--muted); margin:.15rem 0 0; }
+    .prose { max-width:790px; background:white; padding:1.5rem 1.7rem; border:1px solid var(--line); border-radius:15px; }
+    .prose p + p { margin-top:.9rem; }
+    footer { border-top:1px solid var(--line); padding:1.6rem 0 2.5rem; color:var(--muted); font-size:.9rem; }
+    @media (max-width:700px) { main { padding:2.6rem 0; } .grid { grid-template-columns:1fr; } section { margin-top:3rem; } .prose { padding:1.25rem; } }
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><div class="brand"><span class="mark" aria-hidden="true">£</span> Find a Bargain</div><span class="phase">In development · UK</span></div></header>
+  <main class="wrap">
+    <div class="hero">
+      <p class="eyebrow">Second-hand research, made simpler</p>
+      <h1>Spot promising finds. Research before you buy.</h1>
+      <p class="lead">Find a Bargain is an experimental Chrome extension that helps people review second-hand listings, identify products, and investigate possible resale opportunities. It separates research clues from verified financial evidence.</p>
+      <div class="callout"><strong>Private development preview.</strong> Find a Bargain is being tested and is not yet publicly available. Market-price estimates and profit predictions are not guarantees.</div>
+    </div>
+
+    <section aria-labelledby="how-heading">
+      <h2 id="how-heading">How it works</h2>
+      <div class="grid">
+        <article class="tile"><div class="number">1</div><h3>Review listings</h3><p>Use a browser extension to inspect listings currently visible on a supported marketplace page.</p></article>
+        <article class="tile"><div class="number">2</div><h3>Identify and shortlist</h3><p>Filter interesting candidates and optionally use AI to identify products and flag missing information.</p></article>
+        <article class="tile"><div class="number">3</div><h3>Compare evidence</h3><p>Research advertised prices, product condition and available sales evidence before estimating potential resale returns.</p></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="etsy-heading">
+      <h2 id="etsy-heading">Planned Etsy integration</h2>
+      <div class="prose">
+        <p>Find a Bargain is applying for <strong>read-only access to Etsy's official Open API</strong> to search publicly available active listings and show relevant item titles, asking prices and links to the original Etsy product pages.</p>
+        <p>The planned integration is for price comparison and product research. It will <strong>not</strong> publish or edit Etsy listings, perform purchases, or access private shop or buyer information. Etsy asking prices will be clearly labelled as asking prices, not completed-sale values.</p>
+        <p>Etsy access is <strong>not yet active</strong>; availability depends on approval and development.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="privacy-heading">
+      <h2 id="privacy-heading">Data and transparency</h2>
+      <div class="prose">
+        <p>The current development version supports user-triggered listing scans and optional AI analysis. If AI analysis is requested, relevant listing details and, where enabled, an item image may be sent to an AI service through the configured backend. We are evaluating privacy and distribution requirements before any public release.</p>
+        <p>No marketplace partnership or endorsement is implied. Find a Bargain is an independent project.</p>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap">Find a Bargain · Independent UK software project · Development preview</div></footer>
+</body>
+</html>
